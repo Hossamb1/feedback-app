@@ -38,6 +38,7 @@ export const FeedbackProvider = ({ children }) => {
     setFeedbackData(
       feedback.map((item) => (item.id === id ? { ...item, ...updItem } : item))
     );
+    setFeedbackEdit({ item: feedbackEdit.item, edit: false });
   }
 
   return (
