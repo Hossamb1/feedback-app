@@ -46,12 +46,10 @@ const FeedbackForm = () => {
   }
 
   function handleSubmit(e) {
-    const uniqueId = uuidv4();
     e.preventDefault();
     const newFeedback = {
       text,
       rating,
-      id: uniqueId,
     };
     if (feedbackEdit.edit) {
       updateFeedback(feedbackEdit.item.id, newFeedback);
